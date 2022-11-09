@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "ce059a57-aa4d-414f-99ba-0fb094c352a8",
+		"name": "powerledger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saveBatteries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"name\": \"CherryBattery\",\n    \"postCode\": 3000,\n    \"wattCapacity\": 120\n  },\n  {\n    \"name\": \"BatteryManiac\",\n    \"postCode\": 3001,\n    \"wattCapacity\": 128\n  }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/power/battery",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"power",
+						"battery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBatteries",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"name\": \"CherryBattery\",\n    \"postCode\": 3000,\n    \"wattCapacity\": 120\n  },\n  {\n    \"name\": \"BatteryManiac\",\n    \"postCode\": 3001,\n    \"wattCapacity\": 128\n  }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/power/battery",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"power",
+						"battery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBatteriesForPostcode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
